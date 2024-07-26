@@ -25,7 +25,7 @@ module QueulorViews::Cpns
     private
 
     def line_for(item)
-      "<a href='#{item[:link]}'>#{item[:label]}</a>"
+      "<a href='#{item[:link]}'>#{item[:label]}</a>".html_safe
     end
   end
 end
