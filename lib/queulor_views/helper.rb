@@ -6,7 +6,7 @@ module QueulorViews
   class Helper
     class << self
       def test
-        render QueulorViews::Cpns::TestComponent.new
+        QueulorViews::Cpns::TestComponent.new
       end
     end
   end
