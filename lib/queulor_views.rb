@@ -2,6 +2,7 @@
 
 require_relative "queulor_views/version"
 require_relative "queulor_views/helper"
+require_relative "queulor_views/cpns/test"
 
 module QueulorViews
   class Error < StandardError; end
