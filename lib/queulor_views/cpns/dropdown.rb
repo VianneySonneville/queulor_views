@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+require "view_component"
+require "rails"
+
 module QueulorViews::Cpns
   class Dropdown < ViewComponent::Base
     attr_reader :button_name, :items
