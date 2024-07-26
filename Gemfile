@@ -8,4 +8,4 @@ gemspec
 gem "rake", "~> 13.0"
 gem 'rubocop', '~> 0.42.0'
 gem "view_component"
-gem "rails"
+# gem "rails"

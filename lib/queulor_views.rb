@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
-require "queulor_views/version"
-require "queulor_views/helpers"
+require "zeitwerk"
+loader = Zeitwerk::Loader.for_gem
+loader.ignore("#{__dir__}/generators")
+loader.setup
 
-module QueulorViews; end
+# require "queulor_views/version"
+# require "queulor_views/helpers"
+
+module QueulorViews
+  # ActionView::Base.include QueulorViews::Helpers
+end
