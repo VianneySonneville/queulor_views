@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-module QueulorViews
+require "view_component"
+require "rails"
+
+module QueulorViews::Cpns
   class TestComponent < ViewComponent::Base
     attr_reader :foo
 
