@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module QueulorViews::Cpns
-  class Test < ViewComponent::Base
+module QueulorViews
+  class TestComponent < ViewComponent::Base
     attr_reader :foo
 
     def initialize(foo: :bar)

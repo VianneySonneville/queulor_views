@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "queulor_views/version"
-require_relative "queulor_views/helper"
-require_relative "queulor_views/cpns/test"
+require "queulor_views/version"
+require "queulor_views/helper"
+require "view_component"
 
 module QueulorViews
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Cpns, "queulor_views/cpns"
 end
