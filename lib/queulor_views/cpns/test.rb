@@ -5,6 +5,7 @@ module QueulorViews::Cpns
     attr_reader :foo
 
     def initialize(foo: :bar)
+      super
       @foo = foo
     end
 
