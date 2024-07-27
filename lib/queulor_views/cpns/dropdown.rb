@@ -14,7 +14,7 @@ module QueulorViews::Cpns
     end
 
     erb_template <<-ERB
-      <div class="queulor_dropdown" data-controller="queulor_dropdown">
+      <div class="queulor_dropdown" data-controller="queulor-views--queulor-dropdown">
         <button class="queulor_dropdown__button"><%= button_name %></button>
         <% items.each do |item| %>
           <%= line_for item %>
