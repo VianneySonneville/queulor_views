@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# require "view_component"
-# require "rails"
+require "view_component"
+require "rails"
 
 module QueulorViews::Cpns
   class Dropdown < ViewComponent::Base

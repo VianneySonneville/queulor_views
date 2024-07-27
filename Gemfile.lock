@@ -4,7 +4,6 @@ PATH
     queulor_views (0.1.0)
       rails
       view_component
-      zeitwerk
 
 GEM
   remote: https://rubygems.org/
