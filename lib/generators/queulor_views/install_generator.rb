@@ -5,6 +5,10 @@ module QueulorViews
     def install
       # Copy the unobtrusive JS file
       # copy_file('autocomplete-rails.js', 'public/javascripts/autocomplete-rails.js')
+      puts "#{__dir__}/assets/javascripts/*.js"
+      Dir.glob("#{__dir__}/assets/javascripts/*.js") do |file|
+        copy_file file, "app/javascript/controllers/queulor_views/#{file.split("/").last}"
+      end
       puts "################ COUCOU ###############"
     end
 
