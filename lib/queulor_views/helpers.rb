@@ -3,11 +3,9 @@
 require "queulor_views/cpns/dropdown"
 
 module QueulorViews
-  class Helpers
-    class << self
-      def dropdown(button_name:, items:)
-        QueulorViews::Cpns::Dropdown.new button_name:, items:
-      end
+  module Helpers
+    def dropdown(button_name:, items:)
+      QueulorViews::Cpns::Dropdown.new button_name:, items:
     end
   end
 end
