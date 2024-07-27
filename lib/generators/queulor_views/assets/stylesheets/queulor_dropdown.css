@@ -6,13 +6,21 @@
     padding: 6px;
   }
 
-  .queulor_dropdown__animate.show {
+  .queulor_dropdown__animate_click.show {
     max-height: 500px;
     transition: max-height 1s ease-in;
     opacity: 1;
   }
 
-  .queulor_dropdown__animate {
+  .queulor_dropdown__animate_click {
+    &:hover {
+      max-height: 500px;
+      transition: max-height 1s ease-in;
+      opacity: 1;
+    }
+  }
+
+  .queulor_dropdown__animate_click, queulor_dropdown__animate_hover {
     max-height: 0;
     transition: max-height 0.25s ease-out;
     overflow: hidden;
