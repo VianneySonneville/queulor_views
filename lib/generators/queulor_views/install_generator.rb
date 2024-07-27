@@ -1,6 +1,6 @@
 require 'rails/generators'
 
-module QueulorView
+module QueulorViews
   class InstallGenerator < Rails::Generators::Base
     def install
       # Copy the unobtrusive JS file
