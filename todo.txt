@@ -1,0 +1,2 @@
+pouvoir passer de **opt a une fonction foo, qui lui appel bar avec les **opts
+  

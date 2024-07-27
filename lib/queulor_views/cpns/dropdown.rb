@@ -7,7 +7,7 @@ module QueulorViews::Cpns
   class Dropdown < ViewComponent::Base
     attr_reader :button_name, :items, :opts
 
-    def initialize(button_name: :nil, items: [], *opts)
+    def initialize(button_name: :nil, items: [], opts: {})
       super
       @button_name = button_name
       @items = items
