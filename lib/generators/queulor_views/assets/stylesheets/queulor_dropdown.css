@@ -1,9 +1,19 @@
 .queulor_dropdown {
   .queulor_dropdown__content {
-    display: none;
-    .show {
-      display: block;
-      animation: growDown 300ms ease-in-out forwards;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .queulor_dropdown__animate.show {
+    max-height: 500px;
+    transition: max-height 1s ease-in;
+  }
+
+  .queulor_dropdown__animate {
+    max-height: 0;
+    transition: max-height 0.25s ease-out;
+    overflow: hidden;
   }
 }
