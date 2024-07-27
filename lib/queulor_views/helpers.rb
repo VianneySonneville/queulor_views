@@ -4,8 +4,8 @@ require "queulor_views/cpns/dropdown"
 
 module QueulorViews
   module Helpers
-    def dropdown(button_name:, items:)
-      QueulorViews::Cpns::Dropdown.new button_name:, items:
+    def dropdown(button_name:, items:, **opts)
+      QueulorViews::Cpns::Dropdown.new button_name:, items:, opts
     end
   end
 end
