@@ -6,10 +6,10 @@ module QueulorViews
       Dir.glob("#{__dir__}/assets/javascripts/*.js") do |file|
         copy_file file, "app/javascript/controllers/queulor_views/#{file.split("/").last}"
       end
-    end
 
-    def self.source_root
-      File.join(File.dirname(__FILE__), '..', '..', 'assets', 'javascripts')
+      Dir.glob("#{__dir__}/assets/stylesheets/*.css") do |file|
+        copy_file file, "app/assets/stylesheets/queulor_views/#{file.split("/").last}"
+      end
     end
   end
 end

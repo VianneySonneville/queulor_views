@@ -1,0 +1,9 @@
+.queulor_dropdown {
+  .queulor_dropdown__content {
+    display: none;
+    .show {
+      display: block;
+      animation: growDown 300ms ease-in-out forwards;
+    }
+  }
+}
