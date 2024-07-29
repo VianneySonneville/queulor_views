@@ -3,6 +3,7 @@
 require "queulor_views/base"
 require "queulor_views/cpns/dropdown"
 require "queulor_views/cpns/accordion"
+require "queulor_views/cpns/accordion/section"
 
 module QueulorViews
   module Helpers
