@@ -10,17 +10,14 @@ module QueulorViews::Cpns
     end
 
     def initialize(html_attributes: { foo: :bar })
-      puts "*******************************"
-      puts html_attributes
       super(html_attributes:)
-      puts "######################################"
-      puts html_attributes
-      puts "######################################"
-      puts @html_attributes
     end
 
     def call
-      tag.div(html_attributes) { safe_join sections }
+      puts "###############################"
+      puts @html_attributes
+      puts "###############################"
+      tag.div(@html_attributes) { safe_join sections }
     end
   end
 end
