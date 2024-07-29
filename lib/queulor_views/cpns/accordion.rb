@@ -13,12 +13,8 @@ module QueulorViews::Cpns
       super(html_attributes:)
     end
 
-    def call
-      puts "###############################"
-      puts @html_attributes
-      puts sections.inspect
-      puts "###############################"
-      tag.div(@html_attributes) { safe_join sections }
-    end
+    erb_template <<-ERB
+      <%= tag.div(@html_attributes) { safe_join sections } %>
+    ERB
   end
 end
