@@ -23,7 +23,7 @@ module QueulorViews::Cpns::Accordion
 
     erb_template <<-ERB
       <%= tag.div(@html_attributes) do %>
-        <%= title %>
+        <%= "#{@title} coucou" %>
       <% end %>
     ERB
   end
