@@ -16,6 +16,7 @@ module QueulorViews::Cpns
     def call
       puts "###############################"
       puts @html_attributes
+      puts sections.inspect
       puts "###############################"
       tag.div(@html_attributes) { safe_join sections }
     end
