@@ -9,12 +9,12 @@ module QueulorViews::Cpns
       QueulorViews::Cpns::Accordion::Section.new title:, summary:, expanded:, &block
     end
 
-    def initialize(html_attributes: {})
+    def initialize(html_attributes: { foo: :bar })
       super(html_attributes:)
     end
 
     def call
-      tag.div { safe_join sections }
+      tag.div(**html_attributes) { safe_join sections }
     end
   end
 end
