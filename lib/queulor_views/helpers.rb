@@ -17,8 +17,8 @@ module QueulorViews
       end
     end
 
-    def dropdown(button_name:, items:, **opts)
-      QueulorViews::Cpns::Dropdown.new button_name:, items:, opts:
+    def dropdown(button_name, items:, **opts)
+      QueulorViews::Cpns::Dropdown.new button_name, items:, opts:
     end
   end
 end
