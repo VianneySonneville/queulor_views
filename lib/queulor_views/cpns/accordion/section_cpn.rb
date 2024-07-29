@@ -19,7 +19,7 @@ module QueulorViews::Cpns::Accordion
     end
 
     erb_template <<-ERB
-      <%= tag.div(**html_attributes) do %>
+      <%= tag.div(@html_attributes) do %>
         coucou
       <% end %>
     ERB
