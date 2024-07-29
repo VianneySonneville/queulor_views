@@ -2,11 +2,12 @@
 
 require "view_component"
 require "rails"
+require "queulor_views/cpns/accordion/section_cpn"
 
 module QueulorViews::Cpns
-  class Accordion < QueulorViews::Base
+  class AccordionCpn < QueulorViews::Base
     renders_many :sections, ->(title: nil, summary: nil, expanded: false, &block) do
-      QueulorViews::Cpns::Accordion::Section.new title:, summary:, expanded:, &block
+      QueulorViews::Cpns::Accordion::SectionCpn.new title:, summary:, expanded:, &block
     end
 
     def initialize(html_attributes: { foo: :bar })

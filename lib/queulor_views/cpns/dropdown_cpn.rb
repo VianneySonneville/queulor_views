@@ -4,7 +4,7 @@ require "view_component"
 require "rails"
 
 module QueulorViews::Cpns
-  class Dropdown < ViewComponent::Base
+  class DropdownCpn < ViewComponent::Base
     attr_reader :button_name, :items, :opts
 
     def initialize(button_name, items: [], opts: {})
