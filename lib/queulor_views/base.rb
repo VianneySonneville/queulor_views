@@ -9,6 +9,9 @@ module QueulorViews
   class Base < ViewComponent::Base
     def initialize(html_attributes: {})
       @html_attributes = html_attributes
+      puts "------------------------------------------------"
+      puts html_attributes
+      puts "------------------------------------------------"
     end
   end
 end

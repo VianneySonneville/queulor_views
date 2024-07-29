@@ -10,10 +10,13 @@ module QueulorViews::Cpns
     end
 
     def initialize(html_attributes: { foo: :bar })
+      puts "*******************************"
+      puts html_attributes
       super(html_attributes:)
       puts "######################################"
       puts html_attributes
       puts "######################################"
+      puts @html_attributes
     end
 
     def call
