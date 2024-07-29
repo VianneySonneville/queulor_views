@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+require "queulor_views/base"
 require "queulor_views/cpns/dropdown"
+require "queulor_views/cpns/accordion"
 
 module QueulorViews
   module Helpers

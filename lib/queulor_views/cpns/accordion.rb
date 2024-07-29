@@ -5,7 +5,7 @@ require "rails"
 
 module QueulorViews::Cpns
   class Accordion < QueulorViews::Base
-    renders_many :sections :sections, ->(title: nil, summary: nil, expanded: false, &block) do
+    renders_many :sections, ->(title: nil, summary: nil, expanded: false, &block) do
       QueulorViews::Cpns::Accordion::Section.new title:, summary:, expanded:, &block
     end
 
