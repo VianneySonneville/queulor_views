@@ -9,16 +9,11 @@ module QueulorViews
   module Helpers
     def accordion(sections: [], html_attributes: { foo: :bar })
       QueulorViews::Cpns::AccordionCpn.new(html_attributes:) do |cpn|
-        sections.each do |section|
-          redner (
-            cpn.with_section(
-            title: section[:title],
-            summary: section[:summary],
-            expanded: section[:expanded],
-            html_attributes: section[:html_attributes]
-            )
+        # sections.each do |section|
+          cpn.with_section(
+          title: "Two"
           )
-        end
+        # end
       end
     end
 

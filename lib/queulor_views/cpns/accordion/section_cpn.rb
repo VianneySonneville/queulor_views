@@ -11,9 +11,6 @@ module QueulorViews::Cpns::Accordion
     renders_one :summary
 
     def initialize(title:, summary:, expanded:, html_attributes: {})
-      puts "***********************************"
-      puts title
-      puts "***********************************"
       @title = title
       @summary = summary
       @expanded = expanded
