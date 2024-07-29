@@ -8,12 +8,11 @@ module QueulorViews
       QueulorViews::Cpns::Dropdown.new(html_attributes:) do |cpn|
         sections.each do |section|
           cpn.with_section(
-              title: section[:title],
-              summary: section[:summary],
-              expanded: section[:expanded],
-              html_attributes: section[:html_attributes]
-            )
-          end
+            title: section[:title],
+            summary: section[:summary],
+            expanded: section[:expanded],
+            html_attributes: section[:html_attributes]
+          )
         end
       end
     end
