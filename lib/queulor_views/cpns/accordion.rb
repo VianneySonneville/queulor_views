@@ -14,7 +14,7 @@ module QueulorViews::Cpns
     end
 
     def call
-      tag.div { safe_joins sections }
+      tag.div { safe_join sections }
     end
   end
 end
