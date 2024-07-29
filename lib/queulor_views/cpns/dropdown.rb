@@ -7,7 +7,7 @@ module QueulorViews::Cpns
   class Dropdown < ViewComponent::Base
     attr_reader :button_name, :items, :opts
 
-    def initialize(button_name: :nil, items: [], opts: {})
+    def initialize(button_name, items: [], opts: {})
       super
       @button_name = button_name
       @items = items
@@ -28,7 +28,7 @@ module QueulorViews::Cpns
     private
 
     def line_for(item)
-      "<a href='#{item[:link]}'>#{item[:label]}</a>".html_safe
+      content_tag(:a, item[:label], href: item[:link])
     end
 
     def animation
