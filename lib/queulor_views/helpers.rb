@@ -6,7 +6,7 @@ require "queulor_views/cpns/accordion"
 
 module QueulorViews
   module Helpers
-    def accordion(sections: [], html_attributes:)
+    def accordion(sections: [], html_attributes: { foo: :bar })
       QueulorViews::Cpns::Accordion.new(html_attributes:) do |cpn|
         sections.each do |section|
           cpn.with_section(
