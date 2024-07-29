@@ -10,7 +10,7 @@ module QueulorViews
     def accordion(sections: [], html_attributes: { foo: :bar })
       QueulorViews::Cpns::AccordionCpn.new(html_attributes:) do |cpn|
         sections.each do |section|
-          capture(
+          redner (
             cpn.with_section(
             title: section[:title],
             summary: section[:summary],
