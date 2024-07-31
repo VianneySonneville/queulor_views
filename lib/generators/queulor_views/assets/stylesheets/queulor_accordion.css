@@ -1,4 +1,9 @@
 .queulor_accordion {
+  .queulor_accordion__button {
+    cursor: pointer;
+    width: 100%
+  }
+
   .queulor_accordion__content {
     max-height: 0px;
     opacity: 0;

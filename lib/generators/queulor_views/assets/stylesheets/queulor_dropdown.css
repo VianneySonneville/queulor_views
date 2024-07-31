@@ -1,4 +1,8 @@
 .queulor_dropdown {
+  .queulor_dropdown__button {
+    cursor: pointer;
+  }
+
   .queulor_dropdown__content {
     display: flex;
     flex-direction: column;
