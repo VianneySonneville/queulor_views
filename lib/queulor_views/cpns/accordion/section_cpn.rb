@@ -18,7 +18,7 @@ module QueulorViews::Cpns::Accordion
 
     erb_template <<-ERB
       <%= tag.div(**default_html_attributes) do %>
-        <%= tag.button(@title, class: "queulor_accordion__button", data: { action: ""click->queulor-views--queulor-accordion#toggle"" }) %>
+        <%= tag.button(@title, class: "queulor_accordion__button", data: { action: "click->queulor-views--queulor-accordion#toggle" }) %>
         <%= tag.div(content, class: "queulor_accordion__content", data: { "queulor-views--queulor-dropdown-target": "content" }) %>
       <% end %>
     ERB
