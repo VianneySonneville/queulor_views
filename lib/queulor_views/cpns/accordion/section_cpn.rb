@@ -28,7 +28,7 @@ module QueulorViews::Cpns::Accordion
     def default_html_attributes
       {
         "class": "queulor_accordion",
-        "data_controller": "queulor-views--queulor-accordion",
+        "data-controller": "queulor-views--queulor-accordion",
         "data-queulor-views--queulor-dropdown-display-class": "show",
         "data-action": ""
       }
