@@ -29,7 +29,7 @@ module QueulorViews::Cpns::Accordion
       {
         "class": "queulor_accordion",
         "data_controller": "queulor-views--queulor-accordion",
-        "data-queulor-views--queulor-dropdown-display-class": "show"
+        "data-queulor-views--queulor-dropdown-display-class": "show",
         "data-action": ""
       }
     end
