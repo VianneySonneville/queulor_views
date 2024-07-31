@@ -9,7 +9,15 @@ module QueulorViews::Cpns
     end
 
     erb_template <<-ERB
-      <%= tag.div(class: "queulor_accordion", **@html_attributes) { safe_join sections } %>
+      <%= tag.div(**default_html_attributes) { safe_join sections } %>
     ERB
+
+    private
+
+    def default_html_attributes
+      {
+        "class": "queulor_accordion"
+      }
+    end
   end
 end

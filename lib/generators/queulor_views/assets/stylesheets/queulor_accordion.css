@@ -1,0 +1,13 @@
+.queulor_accordion {
+  .queulor_accordion__content {
+    max-height: 0px;
+    opacity: 0;
+  }
+
+  .show ~ .queulor_dropdown__content {
+    max-height 500px;
+    overflow: hidden;
+    padding 0 18px;
+    transition max-height 0.2s ease-out;
+  }
+}

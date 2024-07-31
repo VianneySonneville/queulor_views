@@ -18,13 +18,15 @@
 
   .queulor_dropdown__animate_hover {
     &:hover ~ .queulor_dropdown__content {
-      max-height: 0;
-      transition: max-height 0.25s ease-out;
-      overflow: hidden;
-      opacity: 0;
       max-height: 500px;
       transition: max-height 1s ease-in;
       opacity: 1;
+
+      &:hover {
+        max-height: 500px;
+        transition: max-height 1s ease-in;
+        opacity: 1;
+      }
     }
   }
 }
