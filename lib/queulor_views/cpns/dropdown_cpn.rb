@@ -14,7 +14,7 @@ module QueulorViews::Cpns
     end
 
     erb_template <<-ERB
-      <%= tag.div class: "queulor_dropdown", data: { controller: "queulor-views--queulor-dropdown", queulor_views__queulor_dropdown_display_class: "show"}, **html_attributes do %>
+      <%= tag.div class: "queulor_dropdown", data: { controller: "queulor-views--queulor-dropdown", queulor_views__queulor_dropdown_display_class: "show"}, **@html_attributes do %>
         <%= tag.button "\#{label}", class: "queulor_dropdown__button \#{animation}", data: { action: "\#{action}" } %>
         <%= tag.div class: "queulor_dropdown__content", data: { queulor_views__queulor_dropdown_target: "content" } do %>
           <%= safe_join sections %>
@@ -25,7 +25,7 @@ module QueulorViews::Cpns
     private
 
     def animation
-      case html_attributes[:animation]
+      case @html_attributes[:animation]
       when :hover
         "queulor_dropdown__animate_hover"
       else
@@ -34,7 +34,7 @@ module QueulorViews::Cpns
     end
 
     def action
-      case html_attributes[:animation]
+      case @html_attributes[:animation]
       when :hover
         ""
       else
