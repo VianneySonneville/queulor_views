@@ -8,7 +8,7 @@ module QueulorViews::Cpns
     attr_reader :label, :items, :html_attributes
 
     renders_many :sections, lambda { |label: "", link: "#", html_attributes: {} |
-      QueulorViews::Cpns::dropdown::SectionCpn.new label:, link:, html_attributes:
+      QueulorViews::Cpns::Dropdown::SectionCpn.new label:, link:, html_attributes:
     }
 
     def initialize(label: "", html_attributes: {})
