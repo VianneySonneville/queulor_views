@@ -15,9 +15,9 @@ module QueulorViews::Cpns
     end
 
     erb_template <<-ERB
-      <%= tag.div class: "queulor_dropdown" data: { controller: "queulor-views--queulor-dropdown", queulor-views--queulor-dropdown-display-class: "show"}, **html_attributes do %>
+      <%= tag.div class: "queulor_dropdown", data: { controller: "queulor-views--queulor-dropdown", queulor_views__queulor_dropdown_display_class: "show"}, **html_attributes do %>
         <%= tag.button "\#{button_name}", class: "queulor_dropdown__button \#{animation}", data: { action: "\#{action}" } %>
-        <%= tag.div class: "queulor_dropdown__content", data: { queulor-views--queulor-dropdown-target: "content" } do %>
+        <%= tag.div class: "queulor_dropdown__content", data: { queulor_views__queulor_dropdown_target: "content" } do %>
           <% items.each do |item| %>
             <%= line_for item %>
           <% end %>
