@@ -5,13 +5,13 @@ require "rails"
 
 module QueulorViews::Cpns
   class DropdownCpn < ViewComponent::Base
-    attr_reader :button_name, :items, :opts
+    attr_reader :button_name, :items, :html_attributes
 
     def initialize(button_name, items: [], html_attributes: {})
       super
       @button_name = button_name
       @items = items
-      @opts = opts
+      @html_attributes = html_attributes
     end
 
     erb_template <<-ERB
@@ -32,7 +32,7 @@ module QueulorViews::Cpns
     end
 
     def animation
-      case opts[:animation]
+      case html_attributes[:animation]
       when :hover
         "queulor_dropdown__animate_hover"
       else
@@ -41,7 +41,7 @@ module QueulorViews::Cpns
     end
 
     def action
-      case opts[:animation]
+      case html_attributes[:animation]
       when :hover
         ""
       else
