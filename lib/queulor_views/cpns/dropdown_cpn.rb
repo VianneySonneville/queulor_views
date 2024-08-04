@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module QueulorViews::Cpns
-  class DropdownCpn < QueulorViews
+  class DropdownCpn < QueulorViews::Base
     attr_reader :label, :items
 
     renders_many :sections, lambda { |label: "", link: "#", html_attributes: {} |
