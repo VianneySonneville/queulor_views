@@ -5,7 +5,7 @@ require "rails"
 
 module QueulorViews::Cpns::Accordion
   class SectionCpn < QueulorViews::Base
-    attr_reader :title, :expanded
+    attr_reader :title, :expanded, :html_attributes
 
     renders_one :title
 
