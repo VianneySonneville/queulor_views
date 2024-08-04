@@ -7,7 +7,7 @@ require "queulor_views/cpns/accordion/section_cpn"
 
 module QueulorViews
   module Helpers
-    def accordion(sections: [], html_attributes: { foo: :bar })
+    def accordion(sections: [],**html_attributes)
       QueulorViews::Cpns::AccordionCpn.new(html_attributes:) do |cpn|
         # sections.each do |section|
           cpn.with_section(
@@ -17,8 +17,8 @@ module QueulorViews
       end
     end
 
-    def dropdown(button_name, items:, **opts)
-      QueulorViews::Cpns::DropdownCpn.new button_name, items:, opts:
+    def dropdown(button_name, items:, **html_attributes)
+      QueulorViews::Cpns::DropdownCpn.new button_name, items:, html_attributes:
     end
   end
 end
