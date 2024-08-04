@@ -8,6 +8,5 @@ module QueulorViews::Cpns
     erb_template <<-ERB
       <%= tag.div(class: "queulor_accordion", **html_attributes) { safe_join sections } %>
     ERB
-    end
   end
 end
