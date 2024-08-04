@@ -8,20 +8,18 @@ require "queulor_views/cpns/accordion/section_cpn"
 
 module QueulorViews
   module Helpers
-    def accordion(sections: [],**html_attributes)
-      QueulorViews::Cpns::AccordionCpn.new(html_attributes:) do |cpn|
-        # sections.each do |section|
-          cpn.with_section(
-          title: "Two"
-          )
-        # end
+    def accordion(sections: [], **html_attributes, &block)
+      capture do 
+        render QueulorViews::Cpns::AccordionCpn.new(html_attributes:) do |cpn|
+          block.call(cpn) if block.present?
+        end
       end
     end
 
-    def dropdown(label:, sections: [], **html_attributes)
-      render QueulorViews::Cpns::DropdownCpn.new label:, html_attributes: do |cpn|
-        sections.each do |section|
-          cpn.with_section label: section[:label], link: section[:link], html_attributes: section[:html_attributes]
+    def dropdown(label:, sections: [], **html_attributes, &block)
+      capture do 
+        render QueulorViews::Cpns::DropdownCpn.new(label:, html_attributes:) do |cpn|
+          block.call(cpn) if block.present?
         end
       end
     end
