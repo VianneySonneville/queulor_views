@@ -1,7 +1,21 @@
 .queulor_accordion {
   .queulor_accordion__button {
     cursor: pointer;
-    width: 100%
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+
+    &:after {
+      content: '\002B';
+      color: #777;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    &.active:after {
+      content: '\2212';
+    }
   }
 
   .queulor_accordion__content {

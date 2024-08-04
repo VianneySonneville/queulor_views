@@ -1,6 +1,8 @@
 .queulor_dropdown {
   .queulor_dropdown__button {
     cursor: pointer;
+    padding: 10px;
+    min-width: 160px;
   }
 
   .queulor_dropdown__content {
