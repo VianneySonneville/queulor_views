@@ -18,8 +18,13 @@ module QueulorViews
       end
     end
 
-    def dropdown(button_name, items:, **html_attributes)
+    def dropdown(label:, sections: [], **html_attributes)
       QueulorViews::Cpns::DropdownCpn.new button_name, items:, html_attributes:
+      QueulorViews::Cpns::DropdownCpn.new label:, html_attributes: do |cpn|
+        sections.each do |section|
+          cpn.with_section label: section[:label], link: section[:link], html_attributes: section[:html_attributes]
+        end
+      end
     end
   end
 end
