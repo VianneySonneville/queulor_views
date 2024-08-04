@@ -1,14 +1,11 @@
 # frozen_string_literal
 
-require "view_component"
-require "rails"
-
 module QueulorViews::Cpns::Dropdown
-  class SectionCpn < ViewComponent::Base
+  class SectionCpn < QueulorViews
     attr_reader :label, :link, html_attributes:
 
     def initialize(label:, link:, html_attributes: {})
-      super
+      super(html_attributes:)
       @label = label
       @link = link
       @html_attributes = html_attributes

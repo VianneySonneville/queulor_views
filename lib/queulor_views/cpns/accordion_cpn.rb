@@ -4,10 +4,6 @@ module QueulorViews::Cpns
       QueulorViews::Cpns::Accordion::SectionCpn.new title:, expanded:, html_attributes:, &block
     }
 
-    def initialize(html_attributes: {})
-      super
-    end
-
     erb_template <<-ERB
       <%= tag.div(**default_html_attributes) { safe_join sections } %>
     ERB

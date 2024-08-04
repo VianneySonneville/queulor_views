@@ -2,6 +2,7 @@
 
 require "queulor_views/base"
 require "queulor_views/cpns/dropdown_cpn"
+require "queulor_views/cpns/dropdown/section_cpn"
 require "queulor_views/cpns/accordion_cpn"
 require "queulor_views/cpns/accordion/section_cpn"
 

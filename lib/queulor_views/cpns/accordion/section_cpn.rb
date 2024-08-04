@@ -10,10 +10,9 @@ module QueulorViews::Cpns::Accordion
     renders_one :title
 
     def initialize(title:, expanded:, html_attributes: {})
+      super(html_attributes:)
       @title = title
       @expanded = expanded
-
-      super(html_attributes:)
     end
 
     erb_template <<-ERB

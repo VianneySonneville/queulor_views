@@ -1,20 +1,16 @@
 # frozen_string_literal: true
 
-require "view_component"
-require "rails"
-
 module QueulorViews::Cpns
-  class DropdownCpn < ViewComponent::Base
-    attr_reader :label, :items, :html_attributes
+  class DropdownCpn < QueulorViews
+    attr_reader :label, :items
 
     renders_many :sections, lambda { |label: "", link: "#", html_attributes: {} |
       QueulorViews::Cpns::Dropdown::SectionCpn.new label:, link:, html_attributes:
     }
 
     def initialize(label: "", html_attributes: {})
-      super(html_attributes)
+      super(html_attributes:)
       @label = label
-      @html_attributes = html_attributes
     end
 
     erb_template <<-ERB
