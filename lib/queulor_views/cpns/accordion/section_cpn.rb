@@ -7,8 +7,6 @@ module QueulorViews::Cpns::Accordion
   class SectionCpn < QueulorViews::Base
     attr_reader :title, :expanded, :html_attributes
 
-    renders_one :title
-
     def initialize(title:, expanded:, html_attributes: {})
       super(html_attributes:)
       @title = title
