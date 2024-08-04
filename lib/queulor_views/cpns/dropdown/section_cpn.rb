@@ -2,7 +2,7 @@
 
 module QueulorViews::Cpns::Dropdown
   class SectionCpn < QueulorViews::Base
-    attr_reader :label, :link, html_attributes:
+    attr_reader :label, :link
 
     def initialize(label:, link:, html_attributes: {})
       super(html_attributes:)
