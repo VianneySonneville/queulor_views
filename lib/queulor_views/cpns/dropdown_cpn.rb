@@ -7,7 +7,7 @@ module QueulorViews::Cpns
   class DropdownCpn < ViewComponent::Base
     attr_reader :button_name, :items, :opts
 
-    def initialize(button_name, items: [], opts: {})
+    def initialize(button_name, items: [], html_attributes: {})
       super
       @button_name = button_name
       @items = items
@@ -15,14 +15,14 @@ module QueulorViews::Cpns
     end
 
     erb_template <<-ERB
-      <div class="queulor_dropdown" data-controller="queulor-views--queulor-dropdown" data-queulor-views--queulor-dropdown-display-class="<%= opts[:data_class] || 'show' %>">
-        <button class="queulor_dropdown__button <%= animation %>" data-action="<%= action %>"><%= button_name %></button>
-        <div class="queulor_dropdown__content" data-queulor-views--queulor-dropdown-target="content">
+      <%= tag.div class: "queulor_dropdown" data: { controller: "queulor-views--queulor-dropdown", queulor-views--queulor-dropdown-display-class: "show"}, **html_attributes do %>
+        <%= tag.button "\#{button_name}", class: "queulor_dropdown__button \#{animation}", data: { action: "\#{action}" } %>
+        <%= tag.div class: "queulor_dropdown__content", data: { queulor-views--queulor-dropdown-target: "content" } do %>
           <% items.each do |item| %>
             <%= line_for item %>
           <% end %>
-        </div>
-      </div>
+        <% end %>
+      <% end %>
     ERB
 
     private
